@@ -13,8 +13,9 @@ public class VolunteerOpportunity {
     @Column(name = "totalHoursServed")
     private String totalHoursServed;
 
-    @Column(name = "populationsServed")
-    private String populationsServed;
+
+    @OneToOne(mappedBy = "recordID")
+    private PopulationServed populationServed;
 
     @Column(name = "primaryImpactArea")
     private String primaryImpactArea;
@@ -25,8 +26,8 @@ public class VolunteerOpportunity {
     @Column(name = "registrationType")
     private String registrationType;
 
-    @Column(name = "recordID")
-    private String recordID;
+    @Column(name = "volunteerOpportunityId")
+    private String VolunteerOpportunityId;
 
     public String getName() {
         return name;

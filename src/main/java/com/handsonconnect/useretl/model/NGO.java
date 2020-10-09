@@ -12,7 +12,7 @@ public class NGO {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    @OneToOne(mappedBy = "recordID")
+    @OneToOne(mappedBy = "volunteerOpportunityId")
     private VolunteerOpportunity volunteerOpportunity;
 
     public Integer getId() {
