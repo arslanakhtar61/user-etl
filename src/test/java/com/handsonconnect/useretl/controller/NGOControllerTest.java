@@ -44,7 +44,6 @@ public class NGOControllerTest {
     private JacksonTester<NGO> jsonTester;
 
     private NGO ngo;
-    private VolunteerOpportunity volunteerOpportunity;
 
     @BeforeEach
     public void setup() {
