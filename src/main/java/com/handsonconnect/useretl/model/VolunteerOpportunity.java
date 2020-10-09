@@ -13,10 +13,6 @@ public class VolunteerOpportunity {
     @Column(name = "totalHoursServed")
     private String totalHoursServed;
 
-
-    @OneToOne(mappedBy = "recordID")
-    private PopulationServed populationServed;
-
     @Column(name = "primaryImpactArea")
     private String primaryImpactArea;
 

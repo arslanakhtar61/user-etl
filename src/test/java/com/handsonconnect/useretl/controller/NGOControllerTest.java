@@ -2,7 +2,9 @@ package com.handsonconnect.useretl.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.handsonconnect.useretl.model.NGO;
+import com.handsonconnect.useretl.model.PopulationServed;
 import com.handsonconnect.useretl.model.VolunteerOpportunity;
+import com.handsonconnect.useretl.repository.NGORepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -47,9 +49,9 @@ public class NGOControllerTest {
     public void setup() {
         JacksonTester.initFields(this, objectMapper);
         ngo = new NGO();
-        VolunteerOpportunity volunteerOpportunity = new VolunteerOpportunity();
-        volunteerOpportunity.setName("Serve-A-Thon: Help with sorting donated goods at Crossroads (Youth Welcome)");
-        ngo.setVolunteerOpportunity(volunteerOpportunity);
+        PopulationServed populationServed = new PopulationServed();
+        populationServed.setDescription("Serve-A-Thon: Help with sorting donated goods at Crossroads (Youth Welcome)");
+        ngo.setPopulationServed(populationServed);
     }
 
     @Test

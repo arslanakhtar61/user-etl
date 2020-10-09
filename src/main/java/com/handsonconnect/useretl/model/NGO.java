@@ -10,25 +10,27 @@ public class NGO {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+    @Column(name = "ngo_id")
+    private Integer ngo_id;
 
-    @OneToOne(mappedBy = "volunteerOpportunityId")
-    private VolunteerOpportunity volunteerOpportunity;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "populationServed_id", referencedColumnName = "populationServed_id")
+    private PopulationServed populationServed;
 
-    public Integer getId() {
-        return id;
+    public Integer getNgo_id() {
+        return ngo_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setNgo_id(Integer ngo_id) {
+        this.ngo_id = ngo_id;
     }
 
-    public VolunteerOpportunity getVolunteerOpportunity() {
-        return volunteerOpportunity;
+    public PopulationServed getPopulationServed() {
+        return populationServed;
     }
 
-    public void setVolunteerOpportunity(VolunteerOpportunity volunteerOpportunity) {
-        this.volunteerOpportunity = volunteerOpportunity;
+    public void setPopulationServed(PopulationServed populationServed) {
+        this.populationServed = populationServed;
     }
 
     //    occurrenceID
