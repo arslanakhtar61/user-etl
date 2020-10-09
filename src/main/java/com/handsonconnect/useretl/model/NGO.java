@@ -2,7 +2,7 @@ package com.handsonconnect.useretl.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "NGO")
+@Table(name = "ngo")
 public class NGO {
 
     public NGO() {

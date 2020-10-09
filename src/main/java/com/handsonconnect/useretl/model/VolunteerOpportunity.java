@@ -3,7 +3,7 @@ package com.handsonconnect.useretl.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "VolunteerOpportunity")
+@Table(name = "volunteerOpportunity")
 public class VolunteerOpportunity {
 
     @Id

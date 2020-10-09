@@ -16,6 +16,7 @@ public class NGOController {
     @Autowired
     private NGORepository ngoRepository;
 
+    //http://localhost:8083//api/v1/ngo/partners
     @PostMapping(value="/partners", consumes="application/json", produces="application/json")
     public ResponseEntity<NGO> newPartner(@RequestBody NGO ngo){
         NGO result = ngoRepository.save(ngo);
