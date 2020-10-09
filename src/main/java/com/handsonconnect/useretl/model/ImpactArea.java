@@ -3,23 +3,23 @@ package com.handsonconnect.useretl.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "population_served")
-public class PopulationServed {
+@Table(name = "impact_area")
+public class ImpactArea {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "population_served_id")
-    private Integer populationServed_id;
+    @Column(name = "impact_area_id")
+    private Integer impactArea_id;
 
     @Column(name = "description")
     private String description;
 
-    public Integer getPopulationServed_id() {
-        return populationServed_id;
+    public Integer getImpactArea_id() {
+        return impactArea_id;
     }
 
-    public void setPopulationServed_id(Integer populationServed_id) {
-        this.populationServed_id = populationServed_id;
+    public void setImpactArea_id(Integer impactArea_id) {
+        this.impactArea_id = impactArea_id;
     }
 
     public String getDescription() {

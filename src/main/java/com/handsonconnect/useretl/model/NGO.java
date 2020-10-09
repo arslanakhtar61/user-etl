@@ -14,8 +14,12 @@ public class NGO {
     private Integer ngo_id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "populationServed_id", referencedColumnName = "populationServed_id")
+    @JoinColumn(name = "population_served_id", referencedColumnName = "population_served_id")
     private PopulationServed populationServed;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "impact_area_id", referencedColumnName = "impact_area_id")
+    private ImpactArea impactArea;
 
     public Integer getNgo_id() {
         return ngo_id;
@@ -31,6 +35,14 @@ public class NGO {
 
     public void setPopulationServed(PopulationServed populationServed) {
         this.populationServed = populationServed;
+    }
+
+    public ImpactArea getImpactArea() {
+        return impactArea;
+    }
+
+    public void setImpactArea(ImpactArea impactArea) {
+        this.impactArea = impactArea;
     }
 
     //    occurrenceID
