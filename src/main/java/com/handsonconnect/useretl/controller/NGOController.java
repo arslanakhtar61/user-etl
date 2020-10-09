@@ -16,14 +16,15 @@ public class NGOController {
     @Autowired
     private NGORepository ngoRepository;
 
-    //http://localhost:8083//api/v1/ngo/partners
+    //http://localhost:8083/api/v1/ngo/partners
     @PostMapping(value="/partners", consumes="application/json", produces="application/json")
     public ResponseEntity<NGO> newPartner(@RequestBody NGO ngo){
         NGO result = ngoRepository.save(ngo);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
-    @GetMapping(value="/partners", consumes="application/json", produces="application/json")
+    //http://localhost:8083/api/v1/ngo/partners
+    @GetMapping(value="/partners", produces="application/json")
     public ResponseEntity<List<NGO>> all(){
         List<NGO> results = ngoRepository.findAll();
         return ResponseEntity.status(HttpStatus.CREATED).body(results);
